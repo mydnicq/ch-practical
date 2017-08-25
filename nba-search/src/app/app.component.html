@@ -1,0 +1,19 @@
+<div style="text-align:center">
+  <div>{{ player?.name }}</div>
+  <div>
+    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="Enter player's name" />
+    <small>(like Stephan or Lebron or Goran)</small>
+    <ul>
+      <li *ngFor="let player of players">
+        <span><strong>{{player.firstName}}</strong></span>
+        <span><strong>{{player.lastName}}</strong></span>
+        <div>
+          <span>Points: {{ player.stats.points}}</span>
+        </div>
+        <div>
+          <span>Rebounds: {{ player.stats.rebounds}}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
